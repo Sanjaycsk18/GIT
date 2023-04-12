@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Fixed Header, Centered Content, and Fixed Footer</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+      }
+
+      header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 50px;
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        line-height: 50px;
+      }
+
+      .content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+      }
+
+      footer {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 50px;
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        line-height: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Fixed Header</h1>
+    </header>
+    <div class="content">
+      <h2>Centered Content</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget sapien et mi dignissim convallis. Nullam cursus consectetur turpis, ac imperdiet dolor malesuada eu.</p>
+    </div>
+    <footer>
+      <h3>Fixed Footer</h3>
+    </footer>
+  </body>
+</html>
