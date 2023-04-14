@@ -1,2 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Search Results</title>
+	<style>
+		table {
+			border-collapse: collapse;
+			width: 100%;
+			margin-top: 20px;
+		}
+		th, td {
+			padding: 10px;
+			text-align: left;
+			border-bottom: 1px solid #ddd;
+		}
+		th {
+			background-color: #4CAF50;
+			color: white;
+		}
+	</style>
+</head>
+<body>
+	<h1>Search Results</h1>
+	<form action="#" method="get">
+		<label for="search">Search:</label>
+		<input type="text" id="search" name="search">
+		<button type="submit">Search</button>
+	</form>
+
+	<?php
+		if (isset($_GET['search'])) {
+			$search_term = $_GET['search'];
+			// Here you can write your code to search for information on the specified topic and format the results as an HTML table
+			// For demonstration purposes, I'll just display some dummy results
+			$results = array(
+				array("Title 1", "Description 1"),
+				array("Title 2", "Description 2"),
+				array("Title 3", "Description 3")
+			);
+			if (!empty($results)) {
+				echo "<table>";
+				echo "<tr><th>Title</th><th>Description</th></tr>";
+				foreach ($results as $result) {
+					echo "<tr><td>" . $result[0] . "</td><td>" . $result[1] . "</td></tr>";
+				}
+				echo "</table>";
+			} else {
+				echo "No results found.";
+			}
+		}
+	?>
+</body>
+</html>
 
 
